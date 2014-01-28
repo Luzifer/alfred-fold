@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>me.knut.workflow.fold</string>
+	<key>connections</key>
+	<dict>
+		<key>6A3E737D-D2DE-43C2-A5D0-45514B5DAED4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>36F8BA5A-F0B5-404B-953B-4A0A024CD948</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Knut Ahlers</string>
+	<key>description</key>
+	<string>Runs clipboard content through fold</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Fold</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>fold</string>
+				<key>text</key>
+				<string>Fold clipboard content</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6A3E737D-D2DE-43C2-A5D0-45514B5DAED4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>#!/bin/bash
+
+WIDTH='{query}'
+
+[ -z $WIDTH ] &amp;&amp; WIDTH=72
+
+pbpaste | fold -sw $WIDTH | pbcopy</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>36F8BA5A-F0B5-404B-953B-4A0A024CD948</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>36F8BA5A-F0B5-404B-953B-4A0A024CD948</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>6A3E737D-D2DE-43C2-A5D0-45514B5DAED4</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://blog.knut.me/</string>
+</dict>
+</plist>
